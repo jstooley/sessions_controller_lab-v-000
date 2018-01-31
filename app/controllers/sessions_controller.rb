@@ -8,8 +8,8 @@ class SessionsController < ApplicationController
     if params[:username] == nil
     else
       session[:username] = params[:username]
-    redirect_to '/'
-  end
+      redirect_to '/'
+    end
   end
 
   def destroy
