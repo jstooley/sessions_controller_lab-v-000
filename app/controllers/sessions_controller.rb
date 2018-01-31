@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
   def create
     binding.pry
     if params[:username] == nil
+      redirect_to 'new'
     else
       session[:username] = params[:username]
       redirect_to '/'
