@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    
+
     if session[:name] != nil
       redirect_to '/'
     elsif params[:name] == nil || params[:name] == ""
@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    if session[:name] == nil
     session.delete :name
   end
 
